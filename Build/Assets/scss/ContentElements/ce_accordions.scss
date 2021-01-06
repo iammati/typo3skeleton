@@ -1,0 +1,62 @@
+$lightgray: #e4e4e4;
+
+[data-ctype='ce_accordions'] {
+    .items {
+        .item {
+            width: 100%;
+
+            &:last-child {
+                .top {
+                    border-bottom: 1px solid $lightgray;
+                }
+            }
+
+            &.active {
+                .top {
+                    .icon-view {
+                        svg {
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+            }
+
+            .top {
+                display: flex;
+                width: 100%;
+                border-top: 1px solid $lightgray;
+                padding: .75rem 1.75rem;
+                cursor: pointer;
+
+                .header {
+                    width: 100%;
+                }
+
+                .icon-view {
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 50%;
+
+                    svg {
+                        width: 1.5rem;
+                        transition: .2s;
+                    }
+                }
+            }
+
+            .bottom {
+                padding: .75rem 1.75rem;
+
+                > p {
+                    margin-bottom: 0;
+                }
+
+                table + p {
+                    margin-top: 1.25rem;
+                    margin-bottom: .75rem;
+                    font-size: 85%;
+                }
+            }
+        }
+    }
+}
